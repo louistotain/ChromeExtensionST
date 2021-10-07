@@ -16,7 +16,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
         var interval = setInterval(function () {
 
             if (time == 0) {
-                chrome.tabs.update(undefined, {url: "http://socialclean/"});
+                chrome.tabs.update(undefined, {url: "http://192.168.102.21/social_clean/html/"});
                 time = 60;
                 clearInterval(interval);
             } else {
