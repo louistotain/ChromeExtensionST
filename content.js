@@ -56,11 +56,17 @@ setInterval(function () {
 
 // restyle les pages nodes
 if (document.getElementsByClassName('navbar').length){
+
   document.getElementsByClassName('navbar').item(0).remove();
   document.getElementsByClassName('region--breadcrumb').item(0).remove();
   document.getElementsByClassName('region--secondary-navigation').item(0).remove();
   document.getElementsByClassName('site-footer').item(0).remove();
+
   document.getElementsByClassName('main-container').item(0).style.paddingTop = "0px";
   document.getElementsByClassName('region--content').item(0).style.minWidth = "100%";
   document.getElementsByClassName('region--content').item(0).style.paddingRight = "0px";
+
+  document.getElementsByTagName('body').item(0).style.backgroundImage = "url(http://192.168.102.21/social_clean/html/themes/contrib/socialtremblaye1/assets/images/background_tremblaye_base_4.jpg)";
+  document.getElementsByTagName('body').item(0).style.backgroundSize = "cover";
+
 }
