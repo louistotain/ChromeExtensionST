@@ -1,3 +1,27 @@
+// retour en haut à gauche
+
+var htmlObject2 = document.createElement('a');
+
+htmlObject2.id = "ChromeExtContainer2";
+htmlObject2.style.position = "fixed";
+htmlObject2.style.zIndex = "9999";
+htmlObject2.style.left = "0";
+htmlObject2.style.borderRadius = "5px";
+htmlObject2.style.padding = "5px";
+htmlObject2.style.margin = "5px";
+htmlObject2.onclick = function(e) {
+  e.preventDefault();
+  history.back();
+};
+
+var p2 = "<span id='ChromeExtRetour' style='font-size: 15px; font-weight: bold; color: white; padding: 5px; text-shadow: 3px 3px 3px #0000009e; cursor: pointer' >Retour</span>";
+
+htmlObject2.innerHTML = p2;
+document.body.insertBefore(htmlObject2, document.body.firstChild);
+
+
+// compteur en haut à droite
+
 var htmlObject = document.createElement('div');
 
 htmlObject.id = "ChromeExtContainer";
