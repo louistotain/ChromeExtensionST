@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Extension redirection réseau social",
+  "description": "Extension qui sert à faire la redirection vers la front page du réseau social pour l'écran dynamique",
+  "version": "1.0",
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon" : "img/icon.png"
+  },
+  "icons": {
+    "128" : "img/icon.png"
+  },
+  "background": {
+    "scripts" : ["js/app.js"]
+  },
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ]
+  }]
+}
