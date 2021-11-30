@@ -57,6 +57,8 @@ setInterval(function () {
 // restyle les pages nodes
 if (document.getElementsByClassName('navbar').length){
 
+  document.getElementsByClassName('site-footer').item(0).remove();
+  
   document.getElementsByClassName('navbar').item(0).remove();
   document.getElementsByClassName('region--breadcrumb').item(0).remove();
   document.getElementsByClassName('region--secondary-navigation').item(0).remove();
