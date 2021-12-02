@@ -1,6 +1,6 @@
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
-    if (changeInfo.status == 'complete') {
+    if (changeInfo.status === 'complete') {
 
         var time = 60;
 
@@ -15,8 +15,8 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
         var interval = setInterval(function () {
 
-            if (time == 0) {
-                chrome.tabs.update(undefined, {url: "https://socialtest.tremblaye-sa.fr/ecran-dynamique"});
+            if (time === 0) {
+                chrome.tabs.update(undefined, {url: "https://social.tremblaye-sa.fr/ecran-dynamique"});
                 time = 60;
                 clearInterval(interval);
             } else {
