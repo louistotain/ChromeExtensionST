@@ -48,7 +48,7 @@ setInterval(function () {
 
   chrome.extension.onMessage.addListener(handleMessage);
   function handleMessage(request) {
-    document.getElementById('ChromeExtCompteur').innerHTML = 'Mise à jour écran : 00:' + pad(request.data);
+    document.getElementById('ChromeExtCompteur').innerHTML = 'Mise à jour écran : ' + new Date(request.data * 1000).toISOString().substr(11, 8);
   }
 
 }, 1000);
