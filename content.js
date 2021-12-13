@@ -44,14 +44,11 @@ function pad(value) {
   }
 }
 
-setInterval(function () {
 
-  chrome.extension.onMessage.addListener(handleMessage);
-  function handleMessage(request) {
-    document.getElementById('ChromeExtCompteur').innerHTML = 'Mise à jour écran : ' + new Date(request.data * 1000).toISOString().substr(11, 8);
-  }
-
-}, 1000);
+chrome.extension.onMessage.addListener(handleMessage);
+function handleMessage(request) {
+  document.getElementById('ChromeExtCompteur').innerHTML = 'Mise à jour écran : ' + new Date(request.data * 1000).toISOString().substr(11, 8);
+}
 
 
 // restyle les pages nodes
@@ -72,5 +69,3 @@ if (document.getElementsByClassName('navbar').length){
   if (document.getElementsByTagName('body')) document.getElementsByTagName('body').item(0).style.backgroundSize = "cover";
 
 }
-
-console.log($('#edit-field-sites'))

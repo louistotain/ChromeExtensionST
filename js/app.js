@@ -2,7 +2,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
     if (changeInfo.status === 'complete') {
 
-        var time = 3600;
+        var time = 30;
 
         // Get a reference to the last interval + 1
         const interval_id = window.setInterval(function () {
@@ -17,7 +17,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
             if (time === 0) {
                 chrome.tabs.update(undefined, {url: "https://social.tremblaye-sa.fr/ecran-dynamique"});
-                time = 3600;
+                time = 30;
                 clearInterval(interval);
             } else {
                 time = time - 1;
@@ -27,7 +27,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
                 });
             }
 
-        }, 1000);
+        }, 500);
 
     }
 
