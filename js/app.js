@@ -27,7 +27,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
                 });
             }
 
-        }, 3000);
+        }, 1000);
 
     }
 
